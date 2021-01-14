@@ -121,8 +121,20 @@ function selectRandom(array){
 
 function pickMystery(){
     return envelope = { 
-             suspect:(selectRandom(suspectsArray)),
-             weapon:(selectRandom(weaponsArray)),
-             room:(selectRandom(roomsArray))
+             suspect:selectRandom(suspectsArray),
+             weapon:selectRandom(weaponsArray),
+             room:selectRandom(roomsArray)
             }
+}
+
+
+// ITERATION 3
+
+function revealMystery(envelope){
+    let firstName = envelope.suspect.firstName;
+    let lastName = envelope.suspect.lastName;
+    let weapon = envelope.weapon.name;
+    let room = envelope.room.name;
+    // return "${firstName}," ",${lastName}," ", killed Mr. Boddy using the ${weapon} in the ${room}!"
+    return `${firstName} ${lastName} killed Mr. Boddy using the ${weapon} in the ${room}!`
 }
