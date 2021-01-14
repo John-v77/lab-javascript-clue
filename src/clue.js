@@ -1,13 +1,13 @@
 // ITERATION 1
 
 // Suspects Collection
-const suspectsArray = [];
+// const suspectsArray = [];
 
-// Rooms Collection
-const roomsArray = [];
+// // Rooms Collection
+// const roomsArray = [];
 
-// Weapons Collection
-const weaponsArray = [];
+// // Weapons Collection
+// const weaponsArray = [];
 
 // ITERATION 2
 
@@ -17,8 +17,8 @@ const weaponsArray = [];
 // Suspects Collection
 const suspectsArray = [
     {
-        first_name:   'Jacob',
-        last_name:    'Green',
+        firstName:   'Jacob',
+        lastName:    'Green',
         color:        'green',
         description:  'He has a lot of connections',
         age:          '45',
@@ -26,8 +26,8 @@ const suspectsArray = [
         occupation:   'Entrepreneur'
       },
       {
-        first_name:   'Doctor',
-        last_name:    'Orchid',
+        firstName:   'Doctor',
+        lastName:    'Orchid',
         color:        'white',
         description:  'PhD in plant toxicology. Adopted daughter of Mr. Boddy',
         age:          '26',
@@ -35,8 +35,8 @@ const suspectsArray = [
         occupation:   'Scientist'
       },
       {
-        first_name:   'Victor',
-        last_name:    'Plum',
+        firstName:   'Victor',
+        lastName:    'Plum',
         color:        'purple',
         description:  'Billionare video game designer',
         age:          '22',
@@ -44,8 +44,8 @@ const suspectsArray = [
         occupation:   'Designer'
       },
       {
-        first_name:   'Kasandra',
-        last_name:    'Scarlet',
+        firstName:   'Kasandra',
+        lastName:    'Scarlet',
         color:        'red',
         description:  'She is an A-list movie star with a dark past',
         age:          '31',
@@ -53,8 +53,8 @@ const suspectsArray = [
         occupation:   'Actor'
       },
       {
-        first_name:   'Eleanor',
-        last_name:    'Peacock',
+        firstName:   'Eleanor',
+        lastName:    'Peacock',
         color:        'blue',
         description:  'She is from a wealthy family and uses her status and money to earn popularity',
         age:          '36',
@@ -62,8 +62,8 @@ const suspectsArray = [
         occupation:   'Socialité'
       },
       {
-        first_name:   'Jack',
-        last_name:    'Mustard',
+        firstName:   'Jack',
+        lastName:    'Mustard',
         color:        'yellow',
         description:  'He is a former football player who tries to get by on his former glory',
         age:          '62',
@@ -106,4 +106,23 @@ const weaponsArray = [
 
 // ITERATION 2
 
-// ITERATION 3
+
+function selectRandom(array){
+    if(array.length ===0){
+        return undefined
+    }
+    let randomNumber = (Math.floor(Math.random()*array.length)) 
+    // //return random element from array
+    return array[randomNumber]
+    // return array[Math.floor(Math.random()*array.length)]
+}
+
+
+
+function pickMystery(){
+    return envelope = { 
+             suspect:(selectRandom(suspectsArray)),
+             weapon:(selectRandom(weaponsArray)),
+             room:(selectRandom(roomsArray))
+            }
+}
